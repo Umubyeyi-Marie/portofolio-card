@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-purple-200 dark:bg-purple-900 dark:text-purple-100 transition-colors ">
+    <main class="flex justify-center items-center min-h-screen px-4">
+        <article class="w-full max-w-3xl p-6 sm:p-8 bg-purple-100 dark:bg-purple-800 rounded shadow-md">
+
+            <!-- Header -->
+            <header class="flex flex-col sm:flex-row sm:justify-between items-center w-full mb-6 spacing-x-5  px-">
+                <p class="font-bold text-xl hover:text-green-400 transition">My Portfolio</p>
+                <ul class="flex gap-4 text-green-400  px-5">
+                    <li class="hover:text-red-500">Home</li>
+                    <li class="hover:text-red-500">Skills</li>
+                    <li class="hover:text-red-500">Contact</li>
+                </ul>
+            </header>
+
+            <!-- Main Section -->
+            <section class="flex flex-col md:flex-row gap-5">
+                <figure class="flex flex-col items-center md:items-start">
+                    <img src="me.jpg" alt="Photo of Umubyeyi M. Bienvenue" class="h-64 w-64 rounded-full object-cover" />
+                    <figcaption class="mt-2 font-medium text-center md:text-left p-5">Umubyeyi M. Bienvenue</figcaption>
+                </figure>
+
+                <div class="flex flex-col ">
+                    <h1 class="font-bold text-xl animate-pulse mb-2">Hello, I'm Umubyeyi M. Bienvenue</h1>
+                    <p class="max-w-md leading-relaxed mb-4 ">
+                        I'm a creative web developer with a passion for building amazing applications. I love to learn new technologies and improve my skills.
+                    </p>
+
+                    <button id="toggle-button" class="bg-green-400 hover:bg-green-500 text-white w-48  rounded-xl text-xl animate-bounce  px-4">
+                        More About Me
+                    </button>
+
+                    <address class="max-w-md leading-relaxed mb-4">umubyeyi750@gmail.com</address>
+                    <p><time datetime="2025-04-12" class="italic max-w-md leading-relaxed mb-4"> Created: April 12, 2025</time></p>
+
+                    <div id="about-content" class="hidden max-w-md leading-relaxed mb-2">
+                        <p>Skills: HTML, CSS, JavaScript</p>
+                        <p>Hobbies: Coding, Cooking, Singing</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="flex flex-col items-center border-t border-gray-300 dark:border-gray-700 mt-8 pt-4 text-sm">
+                <p class="mb-2">&copy; 2025 Marie Bienvenue - All Rights Reserved</p>
+                <ul class="flex gap-5 text-green-400">
+                    <li><a href="#" class="hover:underline">Github</a></li>
+                    <li><a href="#" class="hover:underline">LinkedIn</a></li>
+                    <li><a href="#" class="hover:underline">Facebook</a></li>
+                </ul>
+            </footer>
+        </article>
+    </main>
+
+    <script>
+        const button = document.getElementById("toggle-button");
+        const about = document.getElementById("about-content");
+
+        button.addEventListener('click', () => {
+            about.classList.toggle("hidden"); 
+        });
+    </script>
+</body>
+
+</html>
